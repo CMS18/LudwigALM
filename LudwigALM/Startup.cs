@@ -84,7 +84,7 @@ namespace LudwigALM
                 accounts.Add(new Account() { AccountId = accountIds[k], Balance = balances[k] });
             }
             return new Customer() {
-                CustomerId = id,
+                Id = id,
                 Name = name,
                 Accounts = accounts
             };
