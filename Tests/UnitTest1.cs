@@ -314,7 +314,6 @@ namespace Tests
             var account = BankRepository.Transfer(amount, 5, 6);
             var accountB = BankRepository.GetAccounts().Find(x => x.AccountId == 5);
 
-
             // Assert
             Assert.Equal(expected, accountB.Balance);
         }
