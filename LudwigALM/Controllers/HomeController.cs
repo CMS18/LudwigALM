@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LudwigALM.Models;
+using LudwigALM.Models.ViewModels;
 
 namespace LudwigALM.Controllers
 {
@@ -20,15 +21,11 @@ namespace LudwigALM.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var _brVM = new BankRepositoryViewModel();
+            return View(_brVM);
         }
 
         public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult Dummy()
         {
             return View();
         }
