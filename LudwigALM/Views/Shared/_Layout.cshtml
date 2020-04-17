@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@inject IHostingEnvironment hostingEnv
+@using Microsoft.AspNetCore.Hosting
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LudwigALM</title>
-    @inject Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnv
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -56,15 +58,11 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - LudwigALM - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            <h6>@hostingEnv.EnvironmentName</h6>
+            <p>Current branch: @hostingEnv.EnvironmentName</p>
         </div>
     </footer>
 
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment include="Master">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
